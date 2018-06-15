@@ -1,0 +1,4710 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="中国体彩网" name="description"/>
+  <meta content="中国体彩网" name="keywords"/>
+  <title>
+   中国体彩网 - 开奖历史页-大乐透
+  </title>
+  <script src="/res/js/jquery-1.12.2.min.js" type="text/javascript">
+  </script>
+  <link href="/favicon.ico" rel="Shortcut Icon"/>
+  <link href="/res/css/base.css" rel="stylesheet" type="text/css"/>
+  <link href="/res/css/style.css" rel="stylesheet" type="text/css"/>
+  <link href="/res/css/kjlsy.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body>
+  <!-- 头文件 -->
+  <script src="/res/js/user_cookie.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   $(function(){
+	var str;
+	if(window.location.pathname=="/" || window.location.pathname == "/index.html"){
+		str = "<font style='cursor:pointer;' onclick='SetHome(window.location)' >设为首页</font>　　<font onclick='AddFavorite(window.location,document.title)' style='cursor:pointer;'>加入收藏</font>　　中国体育彩票客服热线：<font style='font-weight:bold; color:#D80018;'>95086</font>";
+	}else{
+		str = "<a href='/index.html'>中国体彩网首页</a>　　中国体育彩票客服热线：<font style='font-weight:bold; color:#D80018;'>95086</font>";
+	}
+	$("#isIndex").html(str);
+	
+            var u=GetCookie("userName");
+            
+             if(u != null){
+                     $("#no_login").attr("style", "display: none");
+                     $("#is_login").attr("style", "display: block");  
+                     $("#l_name").text(u);
+                    }else{
+                    $("#is_login").attr("style", "display: none");
+                    $("#no_login").attr("style", "display: block");
+              }
+});
+  </script>
+  <div class="t01">
+   <div class="c01">
+    <div class="t02 black wryh">
+     <div class="t03" id="isIndex" style="width:360px;">
+     </div>
+     <div id="is_login" style="display: none">
+      <div class="t031" style="cursor: pointer; padding:0 40px 0 0;">
+       <a href="/logout.jspx" onclick="DeleteCookie();" target="_blank">
+        <img src="/res/images/b051.png"/>
+       </a>
+      </div>
+      <div class="t031" style=" padding:0 20px 0 0;">
+       您好，
+       <a href="/memberCenter.jspx" target="_blank">
+        <font color="#cd0100" id="l_name">
+        </font>
+       </a>
+      </div>
+     </div>
+     <div id="no_login">
+      <div class="t031" style="cursor: pointer; padding:0 40px 0 0;display:none;">
+       <a alt="中国体彩网会员登录" href="/login.jspx" target="_blank" title="中国体彩网会员登录">
+        <img src="/res/images/b03.png"/>
+       </a>
+      </div>
+      <div class="t031" style=" padding:0 20px 0 0;display:none;">
+       <a alt="中国体彩网会员注册" href="/register.jspx" target="_blank" title="中国体彩网会员注册">
+        注册
+       </a>
+      </div>
+     </div>
+     <div class="t031" id="yu_sjsm">
+      <img class="img" src="/res/images/b02.png"/>
+      <span>
+       手机版
+      </span>
+      <img id="yu_sjmask" src="/res/images/mobile.png"/>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script type="text/javascript">
+   //加入收藏
+	function AddFavorite(sURL, sTitle) {
+		sURL = encodeURI(sURL);
+		try {
+			window.external.addFavorite(sURL, sTitle);
+		} catch (e) {
+			try {
+				window.sidebar.addPanel(sTitle, sURL, "");
+			} catch (e) {
+				alert("您的浏览器不支持自动加入收藏功能，请使用Ctrl+D进行添加，或手动在浏览器里进行设置！");
+			}
+		}
+	}
+	//设为首页
+	function SetHome(url) {
+		if (document.all) {
+			document.body.style.behavior = 'url(#default#homepage)';
+			document.body.setHomePage(url);
+		} else {
+			alert("您的浏览器不支持自动设置页面为首页功能，请您手动在浏览器里设置该页面为首页！");
+		}
+	}
+	$("#yu_sjsm span,#yu_sjsm .img").click(function(){
+		var ul = $("#yu_sjmask");
+		if(ul.css("display")=="none"){
+			ul.slideDown("fast");
+		}else{
+			ul.slideUp("fast");
+		}
+		//点空白弹窗消失
+		$(document).mouseup(function(e){
+			var _con = $('#yu_sjmask');   // 设置目标区域
+			if(!_con.is(e.target) && _con.has(e.target).length === 0){ // Mark 1
+				ul.slideUp("fast");
+			}
+		});
+	});
+  </script>
+  <div class="c01" style="height: 155px">
+   <div class="pd_t01 black wryh">
+    <a href="/xxgk/index.html" target="_blank">
+     信息公开
+    </a>
+    <a href="/xwzx/index.html" target="_blank">
+     新闻资讯
+    </a>
+    <a href="/ygkj/index.html" target="_blank">
+     阳光开奖
+    </a>
+    <a href="/gywh/index.html" target="_blank">
+     公益·文化
+    </a>
+    <a href="/dfdt/index.html" target="_blank">
+     地方动态
+    </a>
+    <a href="/jcsp/index.html" target="_blank">
+     精彩视频
+    </a>
+    <a href="/ztbd/index.html" target="_blank">
+     专题报道
+    </a>
+    <a href="/fwgj/index.html" target="_blank">
+     服务·工具
+    </a>
+    <a href="/dlt/index.html" target="_blank">
+     超级大乐透
+    </a>
+    <a href="/gp/index.html" target="_blank">
+     高频
+    </a>
+    <a href="/jc/index.html" target="_blank">
+     竞彩
+    </a>
+    <a href="/zc/index.html" target="_blank">
+     传统足彩
+    </a>
+    <a href="/dgg/index.html" target="_blank">
+     顶呱刮
+    </a>
+    <a href="/plwf/index.html" target="_blank">
+     排列玩法
+    </a>
+    <a href="/qxc/index.html" target="_blank">
+     7星彩
+    </a>
+    <a href="http://chart.lottery.gov.cn/" target="_blank">
+     体彩数据
+    </a>
+   </div>
+   <div class="ad_pd">
+    <script src="/res/js/ad_171.js" type="text/javascript">
+    </script>
+   </div>
+  </div>
+  <!-- 头文件 end -->
+  <div class="yyl">
+   <!--搜索-->
+   <div class="blockHead yylClear">
+    <div class="bhTitle">
+    </div>
+    <div class="search">
+     <form action="/search.jspx" id="searchForm">
+      <input class="text" id="keywordInput" name="keyword" placeholder="nba" type="text"/>
+      <input class="submit" id="searchSubmit" type="button"/>
+     </form>
+    </div>
+    <script language="javascript" type="text/javascript">
+     function trimSpace(str){   
+		   return str.replace(/^(\s|\u00A0)+/,'').replace(/(\s|\u00A0)+$/,'');   
+		}
+		function checkSearchForm() {
+                        var flg = false; 
+			var keywordInput = trimSpace(document.getElementById('keywordInput').value);
+			if(keywordInput != '' && keywordInput!='请输入关键词'){
+				flg=true;
+			}
+			document.getElementById("keywordInput").focus(); 
+			return flg;
+		}
+		
+		$(function(){
+			$("#searchSubmit").click(function(){
+			  if(checkSearchForm()){
+			   $("#searchForm").submit();
+			  }
+		});
+
+});
+    </script>
+   </div>
+   <!--搜索 end-->
+   <div class="yylMain">
+    <div class="search1 yylClear">
+     <div class="yylFl div1">
+      超级大乐透
+     </div>
+     <div class="yylFl div2" style="width:300px;">
+      每周一、三、六开奖
+     </div>
+     <div class="yylFl div3">
+      <span>
+       <a href="#">
+        最近30期
+       </a>
+      </span>
+      <span>
+       <a href="#">
+        最近50期
+       </a>
+      </span>
+      <span>
+       <a href="#">
+        最近100期
+       </a>
+      </span>
+     </div>
+     <form class="yylFl yylClear" id="tremForm" method="get">
+      <input id="page" name="page" type="hidden" value="false"/>
+      <input id="_ltype" name="_ltype" type="hidden" value="dlt"/>
+      <input id="termNum" name="termNum" type="hidden" value="0"/>
+      <input id="startTerm" name="startTerm" type="text" value="18001"/>
+      期 至
+      <input id="endTerm" name="endTerm" type="text" value="18067"/>
+      期
+      <input type="submit" value="查看"/>
+     </form>
+    </div>
+    <div class="result">
+     <table border="0" cellpadding="0" cellspacing="0" width="1040">
+      <thead>
+       <tr>
+        <th align="center" bgcolor="#dcebfb" rowspan="2" width="35">
+         <strong>
+          期号
+         </strong>
+        </th>
+        <th align="center" bgcolor="#dcebfb" colspan="5">
+         前区号码
+        </th>
+        <th align="center" bgcolor="#dcebfb" colspan="2" rowspan="2">
+         后区号码
+         <br/>
+        </th>
+        <th align="center" bgcolor="#dcebfb" colspan="4">
+         一等奖
+        </th>
+        <th align="center" bgcolor="#dcebfb" colspan="4">
+         二等奖
+        </th>
+        <th align="center" bgcolor="#dcebfb" rowspan="2" width="30">
+         详情
+        </th>
+        <th align="center" bgcolor="#dcebfb" rowspan="2">
+         销售额(元)
+        </th>
+        <th align="center" bgcolor="#dcebfb" rowspan="2">
+         奖池奖金（元）
+        </th>
+        <th align="center" bgcolor="#dcebfb" rowspan="2" width="60">
+         开奖日期
+        </th>
+       </tr>
+       <tr>
+        <th align="center" bgcolor="#dcebfb" width="25">
+         1
+        </th>
+        <th align="center" bgcolor="#dcebfb" width="25">
+         2
+        </th>
+        <th align="center" bgcolor="#dcebfb" width="25">
+         3
+        </th>
+        <th align="center" bgcolor="#dcebfb" width="25">
+         4
+        </th>
+        <th align="center" bgcolor="#dcebfb" width="25">
+         5
+        </th>
+        <th align="center" bgcolor="#dcebfb" width="30">
+         注数
+        </th>
+        <th align="center" bgcolor="#dcebfb" width="60">
+         奖金（元）
+        </th>
+        <th align="center" bgcolor="#dcebfb" width="50">
+         追加注数
+        </th>
+        <th align="center" bgcolor="#dcebfb" width="85">
+         追加奖金（元）
+        </th>
+        <th align="center" bgcolor="#dcebfb" width="30">
+         注数
+        </th>
+        <th align="center" bgcolor="#dcebfb" width="60">
+         奖金（元）
+        </th>
+        <th align="center" bgcolor="#dcebfb" width="50">
+         追加注数
+        </th>
+        <th align="center" bgcolor="#dcebfb" width="85">
+         追加奖金（元）
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18067
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         07
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         12
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         18
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         31
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         07
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         67
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         139,612
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         35
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         83,767
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/66318.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         219,756,324
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,854,895,390.25
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-06-11
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18066
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         01
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         20
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         23
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         32
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         33
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         01
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         57
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         203,548
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         25
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         122,128
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/66260.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         239,793,134
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,813,704,069.93
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-06-09
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18065
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         07
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         28
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         31
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         32
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         08
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         3
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         119
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         75,369
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         53
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         45,221
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/66198.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         220,810,457
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,772,639,586.93
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-06-06
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18064
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         01
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         04
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         11
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         29
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         02
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         65
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         160,419
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         31
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         96,251
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/66138.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         224,954,479
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,761,282,472.73
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-06-04
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18063
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         05
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         14
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         15
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         32
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         34
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         03
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         9,167,585
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,500,551
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         83
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         109,249
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         42
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         65,549
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/66066.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         245,622,727
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,705,403,010.45
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-06-02
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18062
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         12
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         14
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         19
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         23
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         35
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         02
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         07
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         54
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         196,831
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         32
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         118,098
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/66007.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         238,259,472
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,703,821,164.03
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-05-30
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18061
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         12
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         28
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         31
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         08
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         8,898,996
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,339,397
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         56
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         171,242
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         35
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         102,745
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/65912.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         237,450,953
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,653,787,525.57
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-05-28
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18060
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         04
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         22
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         27
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         29
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         31
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         02
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         10
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         55
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         226,490
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         29
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         135,894
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/65838.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         263,797,526
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,654,020,895.59
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-05-26
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18059
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         01
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         09
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         27
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         35
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         06
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         64
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         165,915
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         33
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         99,549
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/65756.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         242,609,804
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,611,696,366.03
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-05-23
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18058
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         09
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         11
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         12
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         26
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         32
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         10
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         117
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         68,635
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         75
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         41,181
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/65667.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         239,072,621
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,563,764,270.56
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-05-21
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18057
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         13
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         19
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         22
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         27
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         28
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         05
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         06
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         7
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         7,295,419
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         7
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4,377,251
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         105
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         101,615
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         55
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         60,969
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/65612.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         263,782,813
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,533,435,106.09
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-05-19
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18056
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         02
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         04
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         16
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         28
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         34
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         05
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         07
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         66
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         160,241
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         42
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         96,144
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/65513.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         242,284,907
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,556,714,938.56
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-05-16
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18055
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         07
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         20
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         33
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         34
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         09
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         78
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         125,126
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         51
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         75,075
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/65431.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         247,382,161
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,505,823,357.74
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-05-14
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18054
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         09
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         10
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         12
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         20
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         30
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         01
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         07
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         13
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         6,617,083
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         7
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         3,970,249
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         122
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         91,172
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         74
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         54,703
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/65358.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         266,905,172
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,465,203,784.82
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-05-12
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18053
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         16
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         21
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         23
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         25
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         02
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         12
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         49
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         252,575
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         26
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         151,545
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/65263.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         247,482,667
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,515,804,329.86
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-05-09
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18052
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         05
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         16
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         18
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         19
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         25
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         02
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         07
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         8,985,806
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         3
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,391,483
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         95
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         103,357
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         45
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         62,014
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/65170.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         240,438,756
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,447,819,442.24
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-05-07
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18051
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         09
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         18
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         28
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         29
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         35
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         03
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         79
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         130,027
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         44
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         78,016
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/65098.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         263,978,006
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,447,396,941.16
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-05-05
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18050
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         22
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         24
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         26
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         34
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         35
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         06
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         12
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         52
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         225,430
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         27
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         135,258
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/65000.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         241,836,897
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,422,293,093.95
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-05-02
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18049
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         07
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         09
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         13
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         06
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         12
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         63
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         147,438
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         31
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         88,462
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/64912.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         230,788,528
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,368,233,194.30
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-04-30
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18048
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         02
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         11
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         20
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         25
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         02
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         07
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         3
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         56
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         204,437
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         37
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         122,662
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/64873.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         276,622,481
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,318,104,005.26
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-04-28
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18047
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         08
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         14
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         20
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         08
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         3
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         62
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         183,363
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         30
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         110,017
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/64756.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         258,398,718
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,293,491,487.24
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-04-25
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18046
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         10
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         20
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         22
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         29
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         32
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         05
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         10
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         7
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         7,630,443
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4,578,265
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         55
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         196,032
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         23
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         117,619
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/64664.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         257,284,500
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,268,370,217.12
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-04-23
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18045
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         02
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         05
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         20
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         30
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         35
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         05
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         09
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         71
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         171,739
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         38
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         103,043
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/64576.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         283,210,997
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,283,900,535.62
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-04-21
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18044
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         02
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         04
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         06
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         18
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         21
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         05
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         08
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         111
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         86,924
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         71
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         52,154
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/64467.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         265,929,558
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,268,779,121.72
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-04-18
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18043
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         06
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         13
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         28
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         33
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         17
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,925,049
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         3,555,029
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         73
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         113,999
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         48
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         68,399
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/64378.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         256,568,992
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,239,147,674.15
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-04-16
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18042
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         19
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         25
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         29
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         35
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         05
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         09
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         19
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,684,224
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         16
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         3,410,534
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         122
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         65,084
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         70
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         39,050
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/64313.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         265,007,165
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,327,068,941.34
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-04-14
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18041
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         01
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         23
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         25
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         31
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         33
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         01
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         12
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         3
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         57
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         213,838
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         35
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         128,302
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/64219.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         253,422,570
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,445,163,138.20
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-04-11
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18040
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         05
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         07
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         18
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         27
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         31
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         01
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         08
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         122
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         70,652
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         65
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         42,391
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/64154.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         211,513,034
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,411,665,761.22
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-04-09
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18039
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         02
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         07
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         14
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         29
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         32
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         84
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         109,752
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         46
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         65,851
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/64088.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         217,344,524
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,364,269,644.97
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-04-07
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18038
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         14
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         23
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         25
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         31
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         32
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         01
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         03
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         3
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         39
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         263,418
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         13
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         158,050
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/64050.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         198,878,775
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,339,234,513.65
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-04-04
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18037
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         01
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         27
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         30
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         31
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         02
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         52
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         183,389
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         27
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         110,033
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/64000.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         205,790,103
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,323,867,872.59
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-04-02
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18036
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         11
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         17
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         18
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         21
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         27
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         07
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         08
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         54
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         207,387
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         12
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         124,432
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/63948.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         227,859,939
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,297,754,793.49
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-03-31
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18035
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         05
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         07
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         12
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         24
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         07
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         73
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         129,707
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         28
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         77,824
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/63870.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         211,060,885
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,244,871,082.16
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-03-28
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18034
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         08
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         11
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         22
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         27
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         32
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         03
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         07
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         8,607,549
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         110
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         78,334
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         26
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         47,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/63809.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         212,117,050
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,196,338,763.17
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-03-26
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18033
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         02
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         19
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         23
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         34
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         09
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         9
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6,877,616
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4,126,569
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         113
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         65,866
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         76
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         39,519
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/63785.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         231,061,109
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,198,381,632.29
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-03-24
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18032
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         07
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         10
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         17
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         32
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         35
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         05
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         12
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         59
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         161,202
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         28
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         96,721
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/63700.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         211,403,323
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,225,006,750.48
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-03-21
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18031
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         08
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         13
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         17
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         23
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         05
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         83
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         115,734
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         26
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         69,440
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/63652.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         211,527,559
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,184,093,714.28
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-03-19
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18030
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         05
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         18
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         21
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         28
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         32
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         09
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         130
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         68,015
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         45
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         40,809
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/63617.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         230,478,981
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,152,546,013.85
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-03-17
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18029
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         09
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         21
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         25
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         29
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         01
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         08
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         3
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         81
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         112,385
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         22
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         67,431
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/63544.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         211,962,307
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,134,052,855.83
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-03-14
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18028
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         04
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         19
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         25
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         30
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         35
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         07
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         60
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         175,366
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         14
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         105,219
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/63500.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         210,397,698
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,125,941,530.51
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-03-12
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18027
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         01
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         18
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         20
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         21
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         26
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         3
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         39
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         257,805
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         8
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         154,683
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/63448.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         222,637,440
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,085,962,016.49
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-03-10
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18026
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         01
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         02
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         04
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         30
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         03
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         05
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         108
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         82,611
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         49
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         49,566
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/63388.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         205,938,359
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,074,912,532.29
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-03-07
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18025
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         07
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         08
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         09
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         15
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         34
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         07
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         08
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         3
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         46
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         203,072
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         12
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         121,843
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/63335.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         207,433,913
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,047,617,317.86
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-03-05
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18024
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         02
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         16
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         24
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         30
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         32
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         07
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         3
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         29
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         383,935
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         6
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         230,361
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/63281.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         230,080,943
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,038,602,897.33
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-03-03
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18023
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         12
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         13
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         18
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         21
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         29
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         02
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         08
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         72
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         110,789
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         17
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         66,473
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/63202.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         203,587,803
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,016,451,627.03
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-02-28
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18022
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         02
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         10
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         19
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         33
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         35
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         05
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         06
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         43
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         223,044
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         12
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         133,826
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/63134.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         202,288,216
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4,988,506,161.93
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-02-26
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18021
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         05
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         06
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         08
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         09
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         15
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         84
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         101,227
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         32
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         60,736
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/63074.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         233,520,667
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4,941,852,651.30
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-02-24
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18020
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         01
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         10
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         13
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         14
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         21
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         09
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         12
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         45
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         251,143
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         18
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         150,685
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/63014.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         223,552,917
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4,908,324,787.43
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-02-14
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18019
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         19
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         21
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         28
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         05
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         12
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         42
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         250,933
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         12
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         150,559
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/62965.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         206,501,821
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4,865,933,980.43
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-02-12
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18018
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         06
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         08
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         13
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         24
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         28
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         06
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         12
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         63
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         176,906
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         14
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         106,143
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/62895.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         226,108,418
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4,824,492,674.96
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-02-10
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18017
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         19
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         21
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         23
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         31
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         09
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         3
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         9,929,207
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,957,524
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         37
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         262,613
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         157,567
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/62812.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         202,520,718
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4,771,863,108.84
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-02-07
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18016
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         01
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         02
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         12
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         13
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         23
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         09
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         12
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         3
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         81
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         108,508
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         23
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         65,104
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/62745.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         202,835,116
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4,766,514,256.47
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-02-05
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18015
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         13
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         15
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         18
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         29
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         05
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         59
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         155,659
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         22
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         93,395
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/62688.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         220,572,521
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4,753,653,322.59
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-02-03
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18014
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         14
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         16
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         18
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         24
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         31
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         01
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         08
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         53
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         188,566
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         22
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         113,139
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/62600.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         203,817,985
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4,726,825,681.12
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-01-31
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18013
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         08
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         24
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         31
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         33
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         35
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         07
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         43
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         245,948
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         9
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         147,568
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/62525.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         203,090,721
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4,684,812,702.88
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-01-29
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18012
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         22
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         24
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         29
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         34
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         07
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         6
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         8,218,993
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4,931,395
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         109
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         92,558
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         27
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         55,534
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/62480.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         218,599,858
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4,635,213,010.41
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-01-27
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18011
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         13
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         15
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         23
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         26
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         01
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         37
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         309,639
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         7
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         185,783
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/62414.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         203,498,133
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4,641,173,456.84
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-01-24
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18010
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         24
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         25
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         26
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         28
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         29
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         12
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         74
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         136,700
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         23
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         82,020
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/62372.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         209,455,315
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4,588,018,755.46
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-01-22
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18009
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         12
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         28
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         30
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         34
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         03
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         0.00
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         38
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         338,952
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         8
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         203,371
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/62316.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         230,281,073
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4,570,009,063.45
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-01-20
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18008
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         09
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         15
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         17
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         20
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         22
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         10
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         3
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         9,822,295
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         3
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,893,377
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         47
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         225,457
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         15
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         135,274
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/62261.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         211,879,491
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4,509,562,520.37
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-01-17
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18007
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         03
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         28
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         31
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         34
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         10,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6,000,000
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         41
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         263,162
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         12
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         157,897
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/62213.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         210,430,592
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4,504,102,672.18
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-01-15
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18006
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         19
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         20
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         30
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         32
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         33
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         03
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         05
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         0.00
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         121
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         79,115
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         38
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         47,469
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/62176.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         228,876,959
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4,483,250,787.12
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-01-13
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18005
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         09
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         23
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         24
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         30
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         08
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         11
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         6
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         7,758,568
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         1
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4,655,140
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         174
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         48,824
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         49
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         29,294
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/62114.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         208,354,385
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4,435,847,449.69
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-01-10
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18004
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         04
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         09
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         22
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         28
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         30
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         01
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         10
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         9,787,367
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         5,872,420
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         56
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         186,520
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         14
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         111,912
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/62083.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         205,801,716
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4,445,675,467.45
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-01-08
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18003
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         21
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         23
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         24
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         30
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         09
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         10
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         8,556,199
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,133,719
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         60
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         172,793
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         16
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         103,675
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/62049.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         226,801,109
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4,440,647,604.82
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-01-06
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="E4E4E4" height="23">
+         18002
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         12
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         20
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         23
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         27
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="red">
+         34
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         01
+        </td>
+        <td align="center" bgcolor="E4E4E4" class="blue" width="25">
+         06
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         11
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         6,484,151
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         1
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         3,890,490
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         77
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         108,436
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         16
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         65,061
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         <a href="/kjdlt/62007.htm" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         208,431,222
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         4,443,585,959.01
+        </td>
+        <td align="center" bgcolor="E4E4E4">
+         2018-01-03
+        </td>
+       </tr>
+       <tr>
+        <td align="center" bgcolor="#f9f9f9" height="23">
+         18001
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         01
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         13
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         22
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         25
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="red">
+         35
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         03
+        </td>
+        <td align="center" bgcolor="#f9f9f9" class="blue" width="25">
+         04
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         9,138,300
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         3
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         5,482,980
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         47
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         249,848
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         9
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         149,908
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         <a href="/kjdlt/61930.html" target="_blank">
+          <img height="20" src="/res/images/history/fangda.png" width="20"/>
+         </a>
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         215,274,808
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         4,479,674,483.42
+        </td>
+        <td align="center" bgcolor="#f9f9f9">
+         2018-01-01
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <div class="page">
+      <!--
+pageClass: 翻页DIV class
+pageObj:翻页对象
+-->
+      <div>
+       共67条记录 1/1页
+       <a disabled="disabled">
+        首页
+       </a>
+       <a disabled="disabled">
+        上一页
+       </a>
+       <a disabled="disabled">
+        下一页
+       </a>
+       <a disabled="disabled">
+        尾页
+       </a>
+       第
+       <select onchange="if(this.value==1){location='history.jspx?page=false&amp;_ltype=dlt&amp;termNum=0&amp;startTerm=18001&amp;endTerm=18067'}else if('history'==''){location='historyindex_'+this.value+'.htm'}else{location='history_'+this.value+'.jspx?page=false&amp;_ltype=dlt&amp;termNum=0&amp;startTerm=18001&amp;endTerm=18067'}this.disabled='disabled'">
+        <option selected="selected" value="1">
+         1
+        </option>
+       </select>
+       页
+      </div>
+     </div>
+    </div>
+    <!--result-->
+   </div>
+  </div>
+  <!-- 尾 -->
+  <!-- 尾 -->
+  <div class="c01">
+   <div class="dgray" style="float:left; width:1040px; height:18px; line-height:18px; text-align:center; color:#fff; font-family:Verdana;padding:0px 0 0 0; background:#CE2A33; margin-top:0px;">
+    购彩有节制，请理性投注！未满18周岁的未成年人不得购买彩票及兑奖！
+   </div>
+   <div class="dgray" style="float:left; width:1040px; height:120px; line-height:28px; text-align:center; color:#222222; font-family:Verdana;padding:10px 0 0 0; background:#fff;">
+    <a href="javascript:void(0);" onclick="SetHome(window.location)">
+     设为首页
+    </a>
+    |
+    <a href="/map/index.html" target="_blank">
+     网站地图
+    </a>
+    |
+    <a href="/gywm2/1610.htm" target="_blank">
+     关于我们
+    </a>
+    |
+    <a href="/lxwm/1611.htm" target="_blank">
+     联系我们
+    </a>
+    |
+    <a href="/yhfwmztk/5.htm" target="_blank">
+     用户服务及免责条款
+    </a>
+    <br/>
+    国家体育总局体育彩票管理中心 Copyright © 2017 www.lottery.gov.cn  ICP经营许可证：京ICP证030713号 京公网安备110101002608号
+    <br/>
+    本网站赛程、赛果、奖金等数据由国家体育总局体育彩票管理中心发布   由新华网股份有限公司承办
+   </div>
+  </div>
+  <!-- 尾 end -->
+  <!-- 尾 end -->
+  <script src="/res/js/public.js" type="text/javascript">
+  </script>
+  <script src="/res/js/jquery_live.js" type="text/javascript">
+  </script>
+  <script src="/res/js/lottery/df_history.js" type="text/javascript">
+  </script>
+  <script src="/res/js/slides.min.jquery.js" type="text/javascript">
+  </script>
+  <script>
+   $(function(){
+        var startSlide = 1;
+         $('#slides2').slides({
+//            preload: true,
+//            preloadImage: 'images/zt/loading.gif',
+            generatePagination: true,
+            play: 3000,
+            pause: 2500,
+            hoverPause: true,
+            start: startSlide
+        });
+
+    });
+  </script>
+ </body>
+</html>
